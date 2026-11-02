@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "SessionPocket",
+  "version": "1.0.0",
+  "description": "One browser. Multiple isolated web sessions. Save, organize, and launch your accounts with SessionPocket.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SessionPocket",
+    "default_icon": {
+      "16": "assets/icon.png",
+      "32": "assets/icon.png",
+      "48": "assets/icon.png",
+      "128": "assets/icon.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icon.png",
+    "32": "assets/icon.png",
+    "48": "assets/icon.png",
+    "128": "assets/icon.png"
+  },
+  "background": {
+    "service_worker": "src/background.ts",
+    "type": "module"
+  },
+  "permissions": [
+    "cookies",
+    "storage",
+    "unlimitedStorage",
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "incognito": "spanning"
+}
+
